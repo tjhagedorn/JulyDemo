@@ -1,0 +1,1681 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#"
+     xml:base="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/design.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#relates_destination -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#relates_destination">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#relates_source -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#relates_source">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#is_connected_to -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#is_connected_to"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#is_related_to -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#is_related_to"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#owned -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#owned">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#URI -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#URI"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_appliedStereotypeIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_appliedStereotypeIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_commitId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_commitId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_created -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_created"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_creator -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_creator"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_diagramType -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_diagramType"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_displayedElementIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_displayedElementIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_editable -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_editable"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_elasticId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_elasticId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_inRefIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_inRefIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_isSite -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_isSite"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_modified -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_modified"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_modifier -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_modifier"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_projectId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_projectId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_refId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_refId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_sourceIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_sourceIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_targetIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_targetIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#activityId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#activityId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#aggregation -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#aggregation"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#annotatedElementIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#annotatedElementIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#appliedProfileId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#appliedProfileId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#appliedStereotypeInstanceId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#appliedStereotypeInstanceId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#applyingPackageId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#applyingPackageId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#argumentIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#argumentIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#associationEndId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#associationEndId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#associationId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#associationId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#behaviorId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#behaviorId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#body -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#body"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#bodyContextId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#bodyContextId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#categoryId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#categoryId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#classifierBehaviorId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#classifierBehaviorId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#classifierIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#classifierIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#clientDependencyIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#clientDependencyIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#clientIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#clientIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#constrainedElementIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#constrainedElementIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#contextId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#contextId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#datatypeId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#datatypeId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#defaultValue -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#defaultValue"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#definingFeatureId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#definingFeatureId">
+        <rdfs:subPropertyOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#conforms_to"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#documentation -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#documentation"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#edgeIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#edgeIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#elementId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#elementId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#endIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#endIds">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#relates_destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#enumerationId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#enumerationId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#generalId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#generalId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#generalizationIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#generalizationIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#guard -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#guard"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#inActivityId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#inActivityId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#inStructuredNodeId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#inStructuredNodeId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#incomingIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#incomingIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#inputElementIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#inputElementIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#insertAtId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#insertAtId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#instanceId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#instanceId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#interfaceId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#interfaceId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#interruptsId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#interruptsId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isAbstract -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isAbstract"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isActive -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isActive"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isBehavior -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isBehavior"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isConjugated -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isConjugated"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isControl -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isControl"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isControlType -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isControlType"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isDerived -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isDerived"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isDerivedUnion -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isDerivedUnion"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isFinalSpecialization -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isFinalSpecialization"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isID -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isID"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isLeaf -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isLeaf"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isLocallyReentrant -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isLocallyReentrant"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isMulticast -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isMulticast"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isMultireceive -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isMultireceive"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isOrdered -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isOrdered"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReadOnly -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReadOnly"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReentrant -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReentrant"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReplaceAll -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReplaceAll"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isService -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isService"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSingleExecution -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSingleExecution"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isStatic -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isStatic"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isStrict -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isStrict"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSubstitutable -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSubstitutable"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSynchronous -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSynchronous"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isUnique -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isUnique"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#is_connected_to -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#is_connected_to"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#is_related_to -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#is_related_to"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#language -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#language"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#lowerValue -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#lowerValue"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mapping -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mapping"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#memberEndIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#memberEndIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mode -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mode"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedElementId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedElementId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedElementProjectId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedElementProjectId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedRefId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedRefId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mustIsolate -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mustIsolate"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#nameExpression -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#nameExpression"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#nodeIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#nodeIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#objectId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#objectId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#onPortId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#onPortId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ordering -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ordering"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#outgoingIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#outgoingIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#outputValueIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#outputValueIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownedAttributeIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownedAttributeIds">
+        <rdfs:subPropertyOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#owned"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownedEndIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownedEndIds">
+        <rdfs:subPropertyOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#owned"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownedLiteralIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownedLiteralIds">
+        <rdfs:subPropertyOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#owned"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownerId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownerId">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#part_of"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownerOfDiagramId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownerOfDiagramId">
+        <rdfs:subPropertyOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ownerId"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#partWithPortId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#partWithPortId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#postContextId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#postContextId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#preContextId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#preContextId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#profileApplicationIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#profileApplicationIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#protocolId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#protocolId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#redefinedPropertyIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#redefinedPropertyIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#regionAsInputId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#regionAsInputId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#regionAsOutputId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#regionAsOutputId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#representationId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#representationId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#resultId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#resultId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#roleId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#roleId">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#relates_destination"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#selectionId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#selectionId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#slotIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#slotIds">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#sourceId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#sourceId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#specificId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#specificId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#specification -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#specification"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#specificationId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#specificationId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#stereotypedElementId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#stereotypedElementId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#structuralFeatureId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#structuralFeatureId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#supplierDependencyIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#supplierDependencyIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#supplierIds -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#supplierIds"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#symbol -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#symbol"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#syncElementId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#syncElementId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#targetId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#targetId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#templateParameterId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#templateParameterId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#transformationId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#transformationId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#twcId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#twcId"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#twcVersion -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#twcVersion"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#typeId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#typeId">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_basis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#upperBound -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#upperBound"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#upperValue -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#upperValue"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#valueId -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#valueId"/>
+        
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#viewpoint -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#viewpoint"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#visibility -->
+
+    <owl:ObjectProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#visibility"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_appliedStereotypeIds_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_appliedStereotypeIds_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_commitId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_commitId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_created_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_created_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_creator_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_creator_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_diagramType_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_diagramType_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_displayedElementIds_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_displayedElementIds_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_editable_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_editable_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_elasticId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_elasticId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_inRefIds_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_inRefIds_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_isSite_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_isSite_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_modified_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_modified_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_modifier_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_modifier_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_refId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_refId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_targetIds_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#_targetIds_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#aggregation_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#aggregation_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#appliedProfileId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#appliedProfileId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#behaviorId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#behaviorId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#body_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#body_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#classifierIds_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#classifierIds_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#documentation_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#documentation_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#elementId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#elementId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#instanceId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#instanceId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isAbstract_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isAbstract_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isActive_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isActive_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isBehavior_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isBehavior_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isConjugated_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isConjugated_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isControlType_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isControlType_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isControl_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isControl_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isDerivedUnion_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isDerivedUnion_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isDerived_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isDerived_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isFinalSpecialization_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isFinalSpecialization_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isID_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isID_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isLeaf_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isLeaf_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isLocallyReentrant_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isLocallyReentrant_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isMulticast_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isMulticast_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isMultireceive_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isMultireceive_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isOrdered_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isOrdered_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReadOnly_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReadOnly_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReentrant_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReentrant_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReplaceAll_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isReplaceAll_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isService_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isService_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSingleExecution_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSingleExecution_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isStatic_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isStatic_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isStrict_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isStrict_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSubstitutable_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSubstitutable_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSynchronous_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isSynchronous_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isUnique_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#isUnique_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#language_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#language_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mode_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mode_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedElementId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedElementId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedElementProjectId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedElementProjectId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedRefId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mountedRefId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mustIsolate_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#mustIsolate_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#name_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#name_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ordering_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ordering_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#syncElementId_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#syncElementId_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#twcVersion_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#twcVersion_dp"/>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#value_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#value_dp">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_value"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#visibility_dp -->
+
+    <owl:DatatypeProperty rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#visibility_dp"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Abstraction -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Abstraction">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#inheritance_relation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Activity -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Activity">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_action_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ActivityFinalNode -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ActivityFinalNode">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#AddStructuralFeatureValueAction -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#AddStructuralFeatureValueAction">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_action_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Association -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Association">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_relation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#CallBehaviorAction -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#CallBehaviorAction">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_action_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Class -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Class">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_universal_element"/>
+        <rdfs:label>SysML Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Comment -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Comment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DescriptiveInformationContentEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Connector -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Connector">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_connection"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ConnectorEnd -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ConnectorEnd">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Constraint -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Constraint">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ControlFlow -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ControlFlow">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#connection_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Dependency -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Dependency">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#dependence_relation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Diagram -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Diagram">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationStructureEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ElementValue -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ElementValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Enumeration -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Enumeration">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#reification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#EnumerationLiteral -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#EnumerationLiteral">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Literal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ExpansionNode -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ExpansionNode">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ExpansionRegion -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ExpansionRegion">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Expression -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Expression">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DescriptiveInformationContentEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#FlowFinalNode -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#FlowFinalNode">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ForkNode -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ForkNode">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Generalization -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Generalization">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#inheritance_relation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#InitialNode -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#InitialNode">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#InputPin -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#InputPin">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#interface_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#InstanceSpecification -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#InstanceSpecification">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_particular_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#InstanceValue -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#InstanceValue">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_particular_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Literal -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Literal">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralBoolean -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralBoolean">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Literal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralInteger -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralInteger">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Literal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralReal -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralReal">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Literal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralString -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralString">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Literal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralUnlimitedNatural -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#LiteralUnlimitedNatural">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Literal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#MergeNode -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#MergeNode">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Model -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Model">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Mount -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Mount">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#reification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ObjectFlow -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ObjectFlow">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#connection_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#OpaqueAction -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#OpaqueAction">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_action_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#OpaqueExpression -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#OpaqueExpression">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#OutputPin -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#OutputPin">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#interface_node"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Package -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Package">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationStructureEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Port -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Port">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationStructureEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ProfileApplication -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ProfileApplication">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_action_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Project -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Project">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationStructureEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Property -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Property">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_universal_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ReadSelfAction -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ReadSelfAction">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_action_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ReadStructuralFeatureAction -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#ReadStructuralFeatureAction">
+        <rdfs:subClassOf rdf:resource="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#model_action_element"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Slot -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#Slot">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationStructureEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#StructuredActivityNode -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/decision/master/SysML.owl#StructuredActivityNode">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#model_node"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

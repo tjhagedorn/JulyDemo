@@ -1,0 +1,1977 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft"
+     xml:base="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft">
+        <owl:imports rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/measures.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl"/>
+        <owl:imports rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology"/>
+        <owl:imports rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/TimeOntology"/>
+        <owl:imports rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology"/>
+        <rdfs:comment>Derived in part from the aircraft ontology and drone ontology as part of a demonstration
+
+http://www.dronetology.net/dronetology
+
+http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl</rdfs:comment>
+        <rdfs:comment>Aspects of this terminology are tenative, most notably the defintions of terms. Domain expert input will likely be needed for future refinement and determination of scope. Terms not-unique to aircraft will need to be refactored to more appropriate ontologies.
+
+The current ontology is not hosted on github. A github style IRI is provided to support future hosting</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#alternative_label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#alternative_label"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition_source -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition_source"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#bearer_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#bearer_of"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#inheres_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#inheres_in"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Flight -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Flight">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <ExtendedRelationOntology:definition>an act of flight is an act wherein an agent or artifact under teh control of an agent travels suspended above ground</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Measurement -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Measurement">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Observation"/>
+        <ExtendedRelationOntology:definition>An act of measurement is an act of observation wherein an agent characterizes some entity by generating data items demarcated standarized units or categories that are about said entity</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Observation -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Observation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition>An act of observation is an intentional act wherein an agent characterizes some entity over time</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Scanning -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Scanning">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Measurement"/>
+        <ExtendedRelationOntology:definition>An act of scanning is an act of measurement wherein some agent generates  a series of measurements to characterize some n-dimensional spatial region</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_watching -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_watching">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Act_of_Observation"/>
+        <ExtendedRelationOntology:definition>an act of watching is an act of observation wherein an agent observes some entity across some time period</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Measurement_Unit_of_Resolution -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Measurement_Unit_of_Resolution">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#aileron -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#aileron">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#roll_stabilizer"/>
+        <ExtendedRelationOntology:definition>An aileron is a roll stabilizer that controls and or changes the roll of an aircraft</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#aircraft_pylon -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#aircraft_pylon">
+        <rdfs:subClassOf rdf:resource="http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Pylon"/>
+        <ExtendedRelationOntology:definition>an aircraft pylon is a pylon that is used to affix an aircraft component to the aircraft&apos;s wing or fuselage</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#airfoil -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#airfoil">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#airframe -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#airframe">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#platform"/>
+        <ExtendedRelationOntology:definition>an airframe is a platform that combines propulsion systems, fuselage, lift generation features, landing apparati, and housing or support structures of an aircraft</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#capture_evasion_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#capture_evasion_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#evasion_capability"/>
+        <obo:IAO_0000115>a capture evasion capability an evasion capability that when realized allows its bearer to avoid being secured against its will by another agent or artifact in control of an agent</obo:IAO_0000115>
+        <rdfs:label>capture evasion capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#combined_stabilizer -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#combined_stabilizer">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#control_fin"/>
+        <ExtendedRelationOntology:definition>a combined stabilizer is a aircraft stabilizer having control surfaces that can maintain and or change the yaw, roll or pitch of an artifact</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#component -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#component">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact"/>
+        <ExtendedRelationOntology:definition>a component is an artifact that is designed explicitly to perform some function or set of possible functions within teh context of some greater artifact of which it may eventually be a part</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#compressor_blade -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#compressor_blade">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#thrust_generating_fin"/>
+        <rdfs:label>compressor blade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#control_fin -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#control_fin">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#fin_artifact"/>
+        <ExtendedRelationOntology:definition>a control fin is a fin artifact that is designed to maintain and or alter the orientation of an artifact moving through a fluid</ExtendedRelationOntology:definition>
+        <rdfs:label>control fin artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_evasion_capabiltiy -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_evasion_capabiltiy">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#evasion_capability"/>
+        <ExtendedRelationOntology:definition>a detection evasion capability is an evasion capabiilty wherein the realization of said capability allows the bearer to avoid the notice of some opposed agent or artifact used by an opposing agent</ExtendedRelationOntology:definition>
+        <rdfs:label>detection evasion capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_event -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_event">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#FiatProcessPart"/>
+        <ExtendedRelationOntology:definition>a detection even is a fiat process part wherein some participant in the process  identifies the presence of another entity within the spatial region containing the process.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_of_human_event -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_of_human_event">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_event"/>
+        <ExtendedRelationOntology:definition>a detection of human event is a detection wherein the detected entity is a human being, facsimile of a human being, or aggregate of humans.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_of_vehicle_event -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_of_vehicle_event">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_event"/>
+        <obo:IAO_0000116>In this case a &quot;facsimile&quot; refers to something the &quot;looks like&quot; a vehicle in teh context of the search process. Ergo, in the case of a search of a photograph, this might be the image of a vehicle. In a search of terrain this might be a vehicle or some other artifact representing a vehicle.</obo:IAO_0000116>
+        <ExtendedRelationOntology:definition>a detection of vehicle even is a detection event where the entity that is detected is a vehicle, a facsimile of a vehicle, or an aggregate of vehicles</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#directional_stabilizer -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#directional_stabilizer">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#control_fin"/>
+        <ExtendedRelationOntology:definition>a directional stabilizer is an aircraft stabilizer that contains a control surface that can maintain and or adjust the yaw of an aircraft</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#drag_generating_fin -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#drag_generating_fin">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#fin_artifact"/>
+        <ExtendedRelationOntology:definition>a drag generating fin as a fin artifact that is designed to passively generate force in the direction parallel to that of the fluid moving around an artifact</ExtendedRelationOntology:definition>
+        <rdfs:label>drag generating fin artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#electro-optical_sensor -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#electro-optical_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Sensor"/>
+        <ExtendedRelationOntology:definition>a electro-optical (EO) sensor is a sensor that converts light measured from the spectrum visible to humans into electircal sensors</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#elevator -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#elevator">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#longitudinal_stabilizer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#enclosure_component -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#enclosure_component">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#component"/>
+        <ExtendedRelationOntology:definition>an enclosure component is a component that is designed to encapsulate (either fully or partially) some other artifact.</ExtendedRelationOntology:definition>
+        <rdfs:label>enclosure component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#endurance -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#endurance">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>endurance is a capability that corresponds to an entity&apos;s ability to participate in some process for some sustained period.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#evasion_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#evasion_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>an evasion capabilty is-a capability that when realized allows its bearer to avoid detection or capture by some opposing agent or artifact used by an opposing agent</ExtendedRelationOntology:definition>
+        <rdfs:label>evasion capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#field_of_view -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#field_of_view">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ExtendedRelationOntology:definition>a field of view is a quality that inheres in a bearer having a visual field that reaches to some extent into the periphery of their optical apparatus.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#fin_artifact -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#fin_artifact">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#component"/>
+        <ExtendedRelationOntology:definition>a fin artifact is an artifact serving as an appendage that interacts with moving fluids in such way as to provide some designed functionality</ExtendedRelationOntology:definition>
+        <rdfs:comment>the artifact qualifier is added to this class to distinguish it from fins as in biological appendages. 
+
+Curent class structure attempts independence of fluid medium</rdfs:comment>
+        <rdfs:label>fin artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#force_exertion_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#force_exertion_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#force_generation_capability"/>
+        <ExtendedRelationOntology:definition>a force exertion capability is a force generation cpaabilty that corresponds to the ability of its bearer to exert some force on some material entity during a process.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#force_generation_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#force_generation_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>a force generation capability is a capability that when realized allows an entity to  generate some amount of force internally or through interaction with its immediate environment</ExtendedRelationOntology:definition>
+        <rdfs:label>force generation capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#infrared_sensor -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#infrared_sensor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Sensor"/>
+        <ExtendedRelationOntology:definition>an infrared sensor is a sensor that measures light from the infrared spectrum (heat) and converts it into electrical signals</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#lift -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#lift">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#force"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#lift_generating_fin -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#lift_generating_fin">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#fin_artifact"/>
+        <ExtendedRelationOntology:definition>a lift generating fin is a fin artifact that is designed to passively generate force perpendicular to the direction of fluid flow around an artifact</ExtendedRelationOntology:definition>
+        <rdfs:label>lift generating fin artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#lift_generation_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#lift_generation_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#force_generation_capability"/>
+        <ExtendedRelationOntology:definition>a life generation capability is a force genreation capability that when realized allows said entity to generate a force normal to the direction of fluid flow when moving through a fluid or immersed in moving fluid.</ExtendedRelationOntology:definition>
+        <rdfs:label>lift generation capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#longitudinal_stabilizer -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#longitudinal_stabilizer">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#control_fin"/>
+        <ExtendedRelationOntology:definition>a longitudinal stabilizer is an aircraft stabilizer having a movable control surface that can maintain or alter the pitch of the aircraft</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#maximum_speed_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#maximum_speed_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#velocity_capability"/>
+        <rdfs:label>maximum speed capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#motion_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#motion_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>a motion capability is acapability that corresponds to the bearer&apos;s ability to change it&apos;s position during some process or some process contained in a region having some set of properties.</ExtendedRelationOntology:definition>
+        <rdfs:label>motion capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#multi-functional_fin_artifact -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#multi-functional_fin_artifact">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#fin_artifact"/>
+        <obo:IAO_0000112>In biomimetic flight (such as flapping wing robots) some wing structures have different functional modes, such as generating thrust  during flight ain addition to lift</obo:IAO_0000112>
+        <ExtendedRelationOntology:definition>a multifunctional fin artifact is a fin artifact having several primary fluid interaction functions.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#perceived_size -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#perceived_size">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ExtendedRelationOntology:definition>a perceived size is a realizable entity that inheres in a bearer whose size can be characterized from a distance as equivalent to some n-dimensional extent</ExtendedRelationOntology:definition>
+        <rdfs:label>perceived size</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#platform -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#platform">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#component"/>
+        <obo:IAO_0000115>an artifact platform is a component that serves as a base component which other components are added to create an assembly artifact</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#power_generation_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#power_generation_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>a power capability is a capability that when realized allows a entity to generate or output energy  at some rate during a process</ExtendedRelationOntology:definition>
+        <rdfs:label>power generation capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#propeller -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#propeller">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#thrust_generating_fin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#propulsive_force_generation_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#propulsive_force_generation_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#force_generation_capability"/>
+        <ExtendedRelationOntology:definition>a propulsive force generation capability is a force generation capability whose realization allows the  entity to generate a force that propels the entity through space.</ExtendedRelationOntology:definition>
+        <rdfs:label>propulsive force generation capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#roll_stabilizer -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#roll_stabilizer">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#control_fin"/>
+        <ExtendedRelationOntology:definition>a roll stabilizer is a control providing fin that stabilizes or alters the roll of some artifac</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#rudder -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#rudder">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#directional_stabilizer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#support_component -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#support_component">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#component"/>
+        <ExtendedRelationOntology:definition>a support component is a compenent designed to bear or attach some other artifact to another</ExtendedRelationOntology:definition>
+        <rdfs:label>support component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#thrust -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#thrust">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#force"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#thrust_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#thrust_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#propulsive_force_generation_capability"/>
+        <ExtendedRelationOntology:definition>a thrust generation capability is a force generation capability whose realization allows the  entity to generate a force that propels the entity through space.</ExtendedRelationOntology:definition>
+        <rdfs:label>thrust capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#thrust_generating_fin -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#thrust_generating_fin">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#fin_artifact"/>
+        <ExtendedRelationOntology:definition>a thrust generating fin is a fin that is actuated so as to provide a reaction force between an artifact and its surrounding fluid</ExtendedRelationOntology:definition>
+        <rdfs:label>thrust generating fin artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#unmanned_aerial_vehicle -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#unmanned_aerial_vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Aircraft"/>
+        <rdfs:label>un-manned aerial vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#wingspan -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#wingspan">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Length"/>
+        <ExtendedRelationOntology:definition>wingspan is a length inhering in some wing indicating the greatest extent from one wingtip to a directly opposed wingtip</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Fuselage -->
+
+    <owl:Class rdf:about="http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Fuselage">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#component"/>
+        <ExtendedRelationOntology:definition>a fuselage is the main body section of an aircraft</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#LandingGear -->
+
+    <owl:Class rdf:about="http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#LandingGear">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#MainLandingGear -->
+
+    <owl:Class rdf:about="http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#MainLandingGear">
+        <rdfs:subClassOf rdf:resource="http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#LandingGear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Nacelle -->
+
+    <owl:Class rdf:about="http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Nacelle">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#enclosure_component"/>
+        <ExtendedRelationOntology:definition>a nacelle is a streamlined enclosure that houses an object on the exterior of a vehicle</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Pylon -->
+
+    <owl:Class rdf:about="http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Pylon">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#support_component"/>
+        <ExtendedRelationOntology:definition>a pylon is a component consisting of an upright structure used to support some load</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a structure to connect an engine to the wing or the fuselage</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Wing -->
+
+    <owl:Class rdf:about="http://www.bauhaus-luftfahrt.net/ontologies/2012/AircraftDesign.owl#Wing">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#lift_generating_fin"/>
+        <ExtendedRelationOntology:definition>a wing artifact is a fin that is designed to produce lift while moving through a fluid</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Domain/SpaceObjectOntology#PayloadCapacity -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Domain/SpaceObjectOntology#PayloadCapacity">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#inheres_in"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Artifact Function that inheres in a Vehicle that is designed to transport Payload, and which is typically characterized by the maximum Weight, Mass, or Volume of Payload that the Vehicle can transport.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adapted from: https://en.wikipedia.org/wiki/Payload</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payload Capacity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#AcousticSensor -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#AcousticSensor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Sensor"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Sensor that is designed to measure sound levels.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wikid.eu/index.php/Acoustic_sensor</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acoustic Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Aircraft -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Vehicle"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Vehicle that is designed to convey passengers from one location to another by air travel.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Aircraft</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Object that was designed by some Agent to realize a certain function.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artifact</rdfs:label>
+        <rdfs:label>artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ArtifactFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ArtifactFunction">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#inheres_in"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A function that inheres in some Artifact in virtue of that Artifact being designed to be used in processes that require that function to be realized.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artifact Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#BidirectionalTransducer -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#BidirectionalTransducer">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Transducer"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Transducer that is designed to receive a signal in the form of physical phenomena and convert it into an electrical signal, and vice versa.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Transducer#Bidirectional</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bidirectional Transducer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ConveyanceArtifactFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ConveyanceArtifactFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#MotionArtifactFunction"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Motion Artifact Function that is realized in a process in which the bearer of the function conveys entities from one location to another.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vehicle</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conveyance Artifact Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#DeceptionArtifactFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#DeceptionArtifactFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ArtifactFunction"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Artifact Function that is realized in processes which misinform or mislead some other entity.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Deception</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deception Artifact Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#DieselEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#DieselEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#InternalCombustionEngine"/>
+        <ExtendedRelationOntology:alternative_label>Compression Ignition Engine</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label>Diesel Cycle Engine</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition>An Internal Combustion Engine that ignites the fuel and air mixture with heat generated during the compression stroke.</ExtendedRelationOntology:definition>
+        <rdfs:label>Diesel Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricBattery -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricBattery">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricalPowerSource"/>
+        <ExtendedRelationOntology:alternative_label>Battery</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition>An Electrical Power Source that is designed to produce electric power by converting chemical energy to electrical energy.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Battery_(electricity)</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Electric Battery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricGenerator -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricGenerator">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricalPowerSource"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Electrical Power Source that is designed to convert mechanical energy to electrical energy for use in an external circuit.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Electric_generator</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Electric Generator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricMotor -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricMotor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Engine"/>
+        <ExtendedRelationOntology:definition>An engine which is designed to convert electrical energy into mechanical energy.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Electric_motor</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Electric Motor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricalPowerSource -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricalPowerSource">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PowerSource"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Power Source that is designed to generate, control, and transfer power by means of electrical energy.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical Power Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Engine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Engine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact"/>
+        <ExtendedRelationOntology:alternative_label>Motor</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Propulsion System that has a function to convert energy into useful mechanical motion.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Engine</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ExternalCombustionEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ExternalCombustionEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Engine"/>
+        <ExtendedRelationOntology:definition>An Engine that that is designed to have an external combustion chamber where the working fluid is heated.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/External_combustion_engine</ExtendedRelationOntology:definition_source>
+        <rdfs:label>External Combustion Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#GasTurbine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#GasTurbine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#InternalCombustionEngine"/>
+        <ExtendedRelationOntology:alternative_label>Combustion Turbine</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition>An Internal Combustion Engine that has a rotating compressor and a turbine and is designed to operate utilizing continous combustion to produce thrust, either directly via exhaust or indirectly via a prop.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Gas_turbine</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Gas Turbine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#GasolineEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#GasolineEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#InternalCombustionEngine"/>
+        <ExtendedRelationOntology:alternative_label>Petrol Engine</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label>Spark Ignition Engine</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition>An Internal Combustion Engine that ignites the fuel and air mixture with a spark plug.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Petrol_engine</ExtendedRelationOntology:definition_source>
+        <rdfs:comment>Label choice here is somewhat pragmatic and doesn&apos;t reflect the actual differentiating criteria. Some may refer to engines of this type as &apos;Otto cycle&apos;, but that is only partially correct, since many spark ignition engines use a two stroke cycle and Otto cycle engines are four stroke spark ignition engines.</rdfs:comment>
+        <rdfs:label>Gasoline Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#HydraulicPowerSource -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#HydraulicPowerSource">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PowerSource"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Power Source that is designed to generate, control, or transmit power by means of pressurized liquid fluid.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydraulic Power Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#InternalCombustionEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#InternalCombustionEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Engine"/>
+        <ExtendedRelationOntology:definition>An Engine that is designed to have an internal combustion chamber where the working fluid is heated.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Internal_combustion_engine</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Internal Combustion Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#JetEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#JetEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#InternalCombustionEngine"/>
+        <ExtendedRelationOntology:definition>A Reaction Engine that discharges a fast moving jet that generates thrust by jet propulsion.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Jet_engine</ExtendedRelationOntology:definition_source>
+        <rdfs:comment>Needs to be aligned with Space Object Ontology. Some jet engines (most) utilize turbines, but some do not. Most rocket engines do not, but some do.</rdfs:comment>
+        <rdfs:label>Jet Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#MotionArtifactFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#MotionArtifactFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ArtifactFunction"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Artifact Function that is realized in a process in which an entity changes its position with respect to time.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Motion_(physics)</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motion Artifact Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#NuclearReactor -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#NuclearReactor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PowerSource"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Power Source that is designed to convert heat into electrical energy by means of controlled chain reaction which produces a steady flow of neutrons generated by the fission of heavy nuclei.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Nuclear_reactor</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Nuclear Reactor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PneumaticPowerSource -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PneumaticPowerSource">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PowerSource"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Power Source that is designed to generate, control, or transmit power by means of compressed air or compressed inert gases.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pneumatic Power Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PowerSource -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PowerSource">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Artifact that is designed to supply power to some other Artifact.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Power_source</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Power Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PrimaryCellElectricBattery -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PrimaryCellElectricBattery">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricBattery"/>
+        <ExtendedRelationOntology:alternative_label>Primary Cell Battery</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition>A Electric Battery that is designed for one-time use and not to be recharged.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Primary_cell</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Primary Cell Electric Battery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PropulsionArtifactFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#PropulsionArtifactFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#MotionArtifactFunction"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Motion Artifact Function that is realized in a process in which the bearer of the function creates force leading to an entity&apos;s movement.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Propulsion</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propulsion Artifact Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#RadioAntenna -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#RadioAntenna">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#BidirectionalTransducer"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Bidirectional Transducer that is designed to convert electric power into radio waves, and radio waves into electric power.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adapted from: https://en.wikipedia.org/wiki/Antenna_(radio)</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Consider adding the following axioms:
+&apos;bearer of&apos; some &apos;Radio Communication Artifact Function&apos;
+&apos;bearer of&apos; some &apos;Radio Communication Reception Artifact Function&apos;
+&apos;bearer of&apos; some &apos;Radio Wave Conversion Artifact Function&apos;</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radio Antenna</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#RadioFrequencySensor -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#RadioFrequencySensor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Sensor"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Sensor that is designed to detect radio frequencies.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO DO: Clarify this definition</rdfs:comment>
+        <rdfs:label>Radio Frequency Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ReciprocatingSteamEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ReciprocatingSteamEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#SteamEngine"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Steam Engine that is designed to use one or more reciprocating pistons to convert pressure into a rotating motion.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Reciprocating_engine</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Reciprocating Steam Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#RocketEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#RocketEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#JetEngine"/>
+        <ExtendedRelationOntology:definition>A Jet Engine that uses only stored rocket propellant mass for forming its high speed propulsive jet.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Rocket_engine</ExtendedRelationOntology:definition_source>
+        <rdfs:comment>Needs to be aligned with Space Object Ontology. Some jet engines (most) utilize turbines, but some do not. Most rocket engines do not, but some do.</rdfs:comment>
+        <rdfs:label>Rocket Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#SecondaryCellElectricBattery -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#SecondaryCellElectricBattery">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ElectricBattery"/>
+        <ExtendedRelationOntology:alternative_label>Rechargable Battery</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label>Secondary Cell Battery</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition>An Electric Battery that is designed to be recharged.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Rechargeable_battery</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Secondary Cell Electric Battery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Sensor -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Transducer"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Transducer that is designed to detect events or changes in its environment, and then provide a corresponding output.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sensor</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Consider adding the following axioms:
+&apos;bearer of&apos; some &apos;Measurement Artifact Function&apos;
+&apos;bearer of&apos; some &apos;Observation Artifact Function&apos;</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#SteamEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#SteamEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ExternalCombustionEngine"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An External Combustion Engine that is designed to use steam as its working fluid.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source>https://en.wikipedia.org/wiki/Steam_engine</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Steam Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#StirlingEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#StirlingEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ExternalCombustionEngine"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An External Combusion Engine that is designed to compress and expand some working fluid at different temperatures, such that there is a net conversion of heat energy to mechanical work.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Stirling_engine</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Stirling Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Transducer -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Transducer">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Artifact that is designed to convert one form of energy to another.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Transducer</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transducer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#TurbineSteamEngine -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#TurbineSteamEngine">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#SteamEngine"/>
+        <ExtendedRelationOntology:alternative_label>Steam Turbine</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Steam Engine that is designed to extract thermal energy from pressurized steam and use it to do mechanical work on a rotating output shaft.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Steam_turbine</ExtendedRelationOntology:definition_source>
+        <rdfs:label>Turbine Steam Engine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Vehicle -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#Artifact"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#bearer_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/ArtifactOntology#ConveyanceArtifactFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Transportation Artifact that is designed to facilitate the movement of material entities from one location to another by conveying them there.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vehicle</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Process in which at least one Agent plays a causative role.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act of producing and/or gathering information by a government or other Organization to guide decisions and actions by answering questions or obtaining advance warning of events and movements deemed to be important or otherwise relevant.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Intelligence_(information_gathering)</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Intelligence Gathering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfReconnaissance -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfReconnaissance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Intelligence Gathering used to determine an Agent&apos;s disposition and intention; the composition and capabilities of Equipment and Facilities, and the surrounding landforms and weather conditions.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Reconnaissance</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Reconnaissance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfViolence -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfViolence">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act of causing harm to oneself or to another through the use of physical or verbal force.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Violence</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Violence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Process in which some independent continuant endures and 1) one or more of the dependent entities it bears increase or decrease in intensity, 2) the entity begins to bear some dependent entity or 3) the entity ceases to bear some dependent entity.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#FiatProcessPart -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#FiatProcessPart">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Process that is part of another Process and is differentiated from the whole conceptually.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiat Process Part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intentional Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Altitude -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Altitude">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Height"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Height that inheres in a Site that externally connects an Independent Continuant to either the surface of the Earth or the Earth&apos;s mean Sea Level.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Altitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Amount -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Amount">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Quality that inheres in a bearer in virtue of the total, aggregate or sum of a number of discrete items or material the entity contains as parts.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wiktionary.org/wiki/amount</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amount</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Bent -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Bent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angular</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kinked</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having one or more angles along its border.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Blunt -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Blunt">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer not having a sharp edge or point.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blunt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Branched -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Branched">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having subdivisions or offshoots.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branched</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Circumference -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Circumference">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Perimeter"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Perimeter that inheres in a circle or ellipse.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circumference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Coiled -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Coiled">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer being wound in concentric rings or spirals.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coiled</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ConcaveShape -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ConcaveShape">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality that inheres in a bearer in virtue of the bearer having one or more cavities, such that at least one line connecting a pair of points on the surface of the bearer will lie outside.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concave Shape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ConeShape -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ConeShape">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalShape"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Three Dimensional Shape that inheres in a bearer in virtue of it having a flat base with sides that taper smoothly to an apex.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Cone</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cone Shape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ConvexShape -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ConvexShape">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line connecting a pair of points on the surface of the bearer will lie outside.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convex Shape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#CubeShape -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#CubeShape">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Cubiod"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Cubiod shape inhering in a bearer in virtue of it having six square faces.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cube Shape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Cubiod -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Cubiod">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalShape"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Three Dimensional Shape that inheres in a bearer in virtue of it having six rectangular faces.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cubiod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Curved -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Curved">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having borders which are smoothly rounded.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curved</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Cylindrical -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Cylindrical">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalShape"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columnar</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Three Dimensional Shape inhering in a bearer in virtue of the bearer having an elongated shape with round bases.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cylindrical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Density -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Density">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ExtendedRelationOntology:alternative_label>Density</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Quality that inheres in a bearer in virtue of that bearer&apos;s mass per unit volume.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass Density</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Depth -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Depth">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#OneDimensionalExtent"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A One Dimensional Extent that inheres in a bearer in virtue of the bearer&apos;s extension in a downward, backward, or inward direction.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Depth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Diameter -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Diameter">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#OneDimensionalExtent"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A One Dimensional Extent that inheres in a circle in virtue of the extent of a straight line that passes through the center of the circle and starts and ends on the circle&apos;s boundary.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Drooping -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Drooping">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having a border that hangs downwards.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drooping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Flat -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Flat">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having a horizontal border without a significant deviation.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Folded -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Folded">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of one part of the bearer being layered over another connected part.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Folded</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Height -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Height">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#OneDimensionalExtent"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A One Dimensional Extent that inheres in a bearer in virtue of the bearer&apos;s extension in a vertical direction.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Height</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Length -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Length">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#OneDimensionalExtent"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A One Dimensional Extent that inheres in a bearer in virtue of the bearer&apos;s greatest extent in one direction.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Length</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Mass -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Mass">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Quality that inheres in a bearer in virtue of the amount of matter in that bearer.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Matter&apos; here can also refer to the inertial energy of an object.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Typical unit of measure is the kilogram or pound.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Oblong -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Oblong">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having an long thin shape with approximately parallel sides.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oblong</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#OneDimensionalExtent -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#OneDimensionalExtent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#SizeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Size Quality that inheres in a bearer in virtue of the bearer&apos;s extension in one dimension.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/PATO_0001708</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subclasses of one dimensional extent are included for usability. It is doubtful any of them can be objectively distinguished (on the side of the bearing entity) without some reference to external properties such as orientation and perspective.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One Dimensional Extent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Perimeter -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Perimeter">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#OneDimensionalExtent"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A One Dimensional Extent that inheres in a bearer in virtue of the extent of a boundary which encloses the bearer.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perimeter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Protruding -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Protruding">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a part of an object in virtue of the part extending out above or beyond the surface of the object.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protruding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Pyramidal -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Pyramidal">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalShape"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Three Dimensional Shape that inheres in a bearer in virtue of it having a polygonal base with vertices that all connect to the same apex to form triangular faces.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Pyramid_(geometry)</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pyramidal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Rectangular -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Rectangular">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of having four sides and four 90 degree angles.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rectangular</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Round -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Round">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circular</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality that inheres in a bearer in virtue of every point along its circumference being equidistant from the center.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.merriam-webster.com/dictionary/round</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Round</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Semicircular -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Semicircular">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape quality inhering in a bearer in virtue of the bearer having the shape of half a circle.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semicircular</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Serrated -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Serrated">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having multiple sharp points along a edge.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Serrated</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Quality that inheres in a bearer in virtue of the ratios between dimensions of external features of that bearer.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shape Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Sharp -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Sharp">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having a fine point or thin edge.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sharp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#SizeQuality -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#SizeQuality">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Quality that inheres in a bearer in virtue of the bearer&apos;s extension in one or more dimensions.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Size Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Sloped -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Sloped">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having a horizontal border which is not level.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sloped</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Speed -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Speed">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Process Profile that is characterized by an object&apos;s change in position during some time period.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Velocity</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object&apos;s speed is the scalar absolute value of it&apos;s velocity.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Speed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Spherical -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Spherical">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalShape"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Three Dimensional Shape inhering in a bearer in virtue of it having round cross sections.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spherical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Split -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Split">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having a linear opening, or having been divided into parts.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Split</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Square -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Square">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Rectangular"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Rectangular shape which has four equal length sides and four 90 degree angles.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Straight -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Straight">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linear</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer not having curves, bends, or angles along its borders.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Straight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Thickness -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Thickness">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Depth"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Depth that inheres in a bearer in virtue of it extending inward through an object.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thickness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Thin -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Thin">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narrow</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slender</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having a width or depth which is significantly smaller in proportion to its length or height.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalExtent -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalExtent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#SizeQuality"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volume</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Size Quality that inheres in a bearer in virtue of the bearer&apos;s extension in three dimensions.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Dimensional Extent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalShape -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ThreeDimensionalShape">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality that inheres only in a three dimensional entity.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Dimensional Shape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Triangular -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Triangular">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of it having three angles and three sides.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triangular</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#TwoDimensionalExtent -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#TwoDimensionalExtent">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#SizeQuality"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Area</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Size Quality that inheres in a bearer in virtue of the bearer&apos;s extension in two dimensions.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two Dimensional Extent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Wavy -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Wavy">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Undulate</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of it having a sinuous or rippled border.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wavy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Weight -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Weight">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Quality that inheres in some material entity with a mass in virtue of its location in some gravitational field.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When an object is &quot;weighed&quot;, in the typical case, it is done so by taking into account the local force of gravity to determine the object&apos;s mass, whose standard of measure is the kilogram. The actual unit of measure of weight is the newton.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Wide -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Wide">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#ShapeQuality"/>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broad</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:alternative_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fat</ExtendedRelationOntology:alternative_label>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Shape Quality inhering in a bearer in virtue of the bearer having a width or depth which is significantly larger in proportion to its length or height.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Width -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#Width">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/QualityOntology#OneDimensionalExtent"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A One Dimensional Extent that inheres in a bearer in virtue of the bearer&apos;s extension in a horizontal direction.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLevel -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLevel">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTemperature -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork -->
+
+    <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#MeasurementUnit"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#price -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#price">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>a price is the disposition of some continuant to be exchanged between agents in return for another continuant or set of continuants when realzied in a  commercial process.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#orientation"/>
+        <obo:IAO_0000115>angle is a geometric relation that is a rate of divergence between two straight lines from some real or hypothetical point of intersection</obo:IAO_0000115>
+        <ExtendedRelationOntology:definition>angularity is an orientation of some entity indicating rotational offset between substantially straight entities or parts of entities about an axis normal to a intersection or hypothetical interesection between siad entities (vertex).</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity_about_principle_axis -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity_about_principle_axis">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity"/>
+        <ExtendedRelationOntology:definition>angularity about a princniple axis is an angularity that indicates the rotation of body about some axis defined relative to its own geometry</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#orientation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#orientation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#orientation"/>
+        <obo:IAO_0000115>orientation is a relational quality having to do with the relative position or structure of two entities</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#parallelism -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#parallelism">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#perpendicularity -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#perpendicularity">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#pitch -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#pitch">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity_about_principle_axis"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#roll -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#roll">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity_about_principle_axis"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#yaw -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#yaw">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/dimensions.owl#angularity_about_principle_axis"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#duration -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#duration">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <obo:IAO_0000115>duration is the length time required for a process to occur</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#acceleration -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#acceleration">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <obo:IAO_0000115>acceleration is the rate of change of the velocity of some object</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#force -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#force">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <obo:IAO_0000115>force is the product of an objects mass and acceleration</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#momentum -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#momentum">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+        <obo:IAO_0000115>momentum is the product of the mass and velocity of some object</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#range_capability -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#range_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#motion_capability"/>
+        <ExtendedRelationOntology:definition>a range capability is a capability that enables its bearer to realize a process wherein the bearer moves itself or some material or information entity through space for some distance</ExtendedRelationOntology:definition>
+        <rdfs:label>range capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#velocity_capability -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#velocity_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#motion_capability"/>
+        <ExtendedRelationOntology:definition>a speed capability is a capability that allows some entity to a certain level of speed during a process</ExtendedRelationOntology:definition>
+        <rdfs:label>velocity capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#field_of_view -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#field_of_view">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_capability"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#ground_sweep_distance -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#ground_sweep_distance">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#payload_role -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#payload_role">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#swath_width -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#swath_width">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_capability"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#transportability -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#transportability">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <ExtendedRelationOntology:definition>transportability is a quality of some entity to be able to be moved by some other entity</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Pixel_Measurement_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Pixel_Measurement_Unit">
+        <rdf:type rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Measurement_Unit_of_Resolution"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Voxel_Measurement_Unit -->
+
+    <owl:NamedIndividual rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Voxel_Measurement_Unit">
+        <rdf:type rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#Measurement_Unit_of_Resolution"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

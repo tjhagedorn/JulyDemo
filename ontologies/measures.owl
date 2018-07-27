@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/asus/ontologies/2018/5/untitled-ontology-94#"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2018/5/untitled-ontology-94"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/measures.owl">
+        <owl:imports rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>a detection capability is a capability that when realized allows the bearer to successfully distinguish between presence and absence of some entity  or distinguish between said target entity and some other entity during a measurement process</ExtendedRelationOntology:definition>
+        <rdfs:label>detection capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#infrared_measurement_capabiltiy -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#infrared_measurement_capabiltiy">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#spectrum_measurement_capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_accuracy_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_accuracy_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_quality_capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>a measurement capability is a capability that inheres in a continuant having the ability to numerically characterize some other entity up to some level of quality</ExtendedRelationOntology:definition>
+        <rdfs:label>measurement capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_precision_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_precision_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_quality_capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_quality_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_quality_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_capability"/>
+        <ExtendedRelationOntology:definition>a measurement quality capability is a measurement capability that when realized allows some entity performing a measurement to obtain measurements having certain desirable features</ExtendedRelationOntology:definition>
+        <rdfs:label>measurement quality capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_resolution_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_resolution_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_quality_capability"/>
+        <ExtendedRelationOntology:definition>a measurement resolution capability is a measurement capability that when realized allows the bearer to measure some phenomenon at some minimum scale</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#sensitivity_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#sensitivity_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_capability"/>
+        <ExtendedRelationOntology:definition>a sensitivity classification capability is a detection capability that when realized allows its bearer to identify &quot;true positives&quot; in which the detection target is present and the bearer correctly identifies it as such</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#specificity_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#specificity_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#detection_capability"/>
+        <ExtendedRelationOntology:definition>a sensitivity classification capability is a detection capability that when realized allows its bearer to identify &quot;true negatives&quot; in which the detection target is not present and the bearer correctly identifies it as such</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#spectrum_measurement_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#spectrum_measurement_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_capability"/>
+        <ExtendedRelationOntology:definition>a specturm measurment capability is an measurement capability that when realized allows its bearer to measure light having some wavelength or range of wavelengths within the electromagnetic spectrum</ExtendedRelationOntology:definition>
+        <rdfs:label>spectrum measurement capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#visible_light_measurement_capability -->
+
+    <owl:Class rdf:about="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#visible_light_measurement_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#spectrum_measurement_capability"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <ExtendedRelationOntology:definition>a capability is a beneficial disposition inhering in some entity that when realized allows said entity to successfuly particiapte in a process up to some specified level</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#measurement_rate_capability -->
+
+    <owl:Class rdf:about="https://www.raw.githubusers.com/UMassCenterforeDesign/sysml/sysML_nextry1.owl#measurement_rate_capability">
+        <rdfs:subClassOf rdf:resource="http://raw.githubusecontent.com/decision/UMassCenterforEDesign/master/drone_aircraft#measurement_quality_capability"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,2797 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"
+     xml:base="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ExtendedRelationOntology="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_method.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#definition"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#example_of_usage -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#example_of_usage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#has_participant -->
+
+    <owl:ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects">
+        <rdfs:subPropertyOf rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#eliminates -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#eliminates">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies"/>
+            <rdf:Description rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#part_of"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates_option"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#replaces -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#replaces">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#replaces"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_basis -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_basis">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#is_computed_from"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_input"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#is_computed_from"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_output"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_input -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_input">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_model_element"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_output -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_output">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_model_element"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#is_computed_from -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#is_computed_from">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#has_basis"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#has_classification -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#has_classification">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#designated_by"/>
+        <rdfs:label>has classification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs">
+        <rdfs:subPropertyOf rdf:resource="http://www.obofoundry.org/ro/ro.owl#participates_in"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decides_about"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#approves -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#approves">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts"/>
+        <ExtendedRelationOntology:definition>a relation in which a decision process yields a judgment wherein a some entity is accepted for a role  in future planned processes</ExtendedRelationOntology:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authorizes -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authorizes">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#concurs_with -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#concurs_with">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#accepts"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decides_about -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decides_about">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision"/>
+        <ExtendedRelationOntology:definition>describes a relation wherein some decision process results in a judgment about some other entity</ExtendedRelationOntology:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates_criterion -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates_criterion">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates"/>
+        <rdfs:label>eliminates criterion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates_option -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates_option">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates"/>
+        <rdfs:label>eliminates alternative</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_active_alternative -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_active_alternative">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative"/>
+        <ExtendedRelationOntology:definition>describes a relation wherein some alternative is available for selection based upon the process history of some set of decisions of which it is a part.</ExtendedRelationOntology:definition>
+        <rdfs:label>has active alternative</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_input"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <rdfs:label>has alternative</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_inactive_alternative -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_inactive_alternative">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative"/>
+        <rdfs:label>has inactive alternative</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#introduces -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#introduces">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#introduces_criterion -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#introduces_criterion">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#introduces"/>
+        <rdfs:label>introduces item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#makes_decision -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#makes_decision">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/user%20capability.owl#performs"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <ExtendedRelationOntology:definition>indicates a relation wherein some entity having a decision maker role participats in a decision process that decides about soemthing</ExtendedRelationOntology:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#refers_to -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#refers_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#is_about"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label>refers to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rejects -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rejects">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decides_about"/>
+        <ExtendedRelationOntology:definition>a relation in which a decision process yields a judgment wherein a some entity is barred from a role  in future planned processes</ExtendedRelationOntology:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#replaces -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#replaces">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#modifies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#selects -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#selects">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decides_about"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <ExtendedRelationOntology:definition>a relation in whcih a decision process chooses one entity for use in future planned processes from some set of alternatives</ExtendedRelationOntology:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001937 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001937"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_computed_value -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_computed_value">
+        <rdfs:label>has computed value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_estimated_value -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_estimated_value">
+        <rdfs:label>has estimated value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000100">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationStructureEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Objective -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Objective"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Process in which at least one Agent plays a causative role.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act of using an Artifact.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Artifact Employment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactModification -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactModification">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactProcessing"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Processing in which an existing artifact is acted upon in a manner that changes one or more of its qualities, dispositions or functions or adds or removes one of these same.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comment: Excluded from this class would be instaces of role change or creation such as introduction of an artifact as a piece of evidence in a trial or loading of artifacts onto a ship for transport.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Artifact Modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactProcessing -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactProcessing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act of performing a series of mechanical or chemical operations on something in order to change or preserve it.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Artifact Processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommissiveCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommissiveCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Communication that commits a speaker to some future action.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived (loosely) from: John Searle&apos;s Speech Acts: An Essay in the Philosophy of Language</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: agreeing, betting, guaranteeing, inviting, offering, promising, swearing, volunteering</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Commissive Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act in which some Information Content Entity is transferred from some Agent to Another.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Communication</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunicationByMedia -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunicationByMedia">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Communication in which some Artifact is used to transfer an Information Bearing Entity from sender(s) to receiver(s).</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Communication by Media</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDeceptiveCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDeceptiveCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ac Act of Communication intended to mislead the audience by distortion or falsification of evidence and induce a reaction that is prejudicial to the interests of the audience.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: JC3IEDM-MIRD-DMWG-Edition_3.0.2_20090514</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Deceptive Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDeclarativeCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDeclarativeCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Communication that changes the reality in accord with the proposition of the declaration.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived (loosely) from: John Searle&apos;s Speech Acts: An Essay in the Philosophy of Language</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: Baptism, Sentencing a person to imprisonment, Pronouncing a couple husband and wife, Declaring war</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Declarative Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDecoyUse -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDecoyUse">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Employment in which some Agent uses some Decoy.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Decoy Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDirectiveCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfDirectiveCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Communication that is intended to cause the hearer to take a particular action.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived (loosely) from: John Searle&apos;s Speech Acts: An Essay in the Philosophy of Language</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: advising, admonishing, asking, begging, dismissing, excusing, forbidding, instructing, ordering, permitting, requesting, requiring, suggesting, urging, warning</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Directive Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfEntertainment -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfEntertainment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act consisting of any activity which provides a diversion or permits people to amuse themselves.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Entertainment</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Entertainment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfEspionage -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfEspionage">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Intelligence Gathering involving the obtaining of information that is considered secret or confidential without the permission of the holder of the information.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Espionage</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Espionage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfExpressiveCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfExpressiveCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Communication that expresses the Speaker&apos;s attitudes and emotions towards some proposition.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived (loosely) from: John Searle&apos;s Speech Acts: An Essay in the Philosophy of Language</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: apologizing, condoling, congratulating, greeting, thanking, accepting (acknowledging an acknowledgment)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Expressive Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfFacilityUse -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfFacilityUse">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Employment in which an Agent makes use of some Facility.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Facility Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfFinancialInstrumentUse -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfFinancialInstrumentUse">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Employment in which some Agent uses some Financial Instrument.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Financial Instrument Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfGovernment -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfGovernment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act which is generated or supported by some Geopolitical Entity and enforced by some Government Agent.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Act of Government</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfInhabitancy -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfInhabitancy">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act in which a Person lives at a Site for a period of time that may be as short as 1 day/night or as long as the Person&apos;s entire life.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://www.merriam-webster.com/dictionary/inhabit</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Inhabitancy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act of producing and/or gathering information by a government or other Organization to guide decisions and actions by answering questions or obtaining advance warning of events and movements deemed to be important or otherwise relevant.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Intelligence_(information_gathering)</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Intelligence Gathering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfLegalInstrumentUse -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfLegalInstrumentUse">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Employment in which some Agent uses some Legal Instrument.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Legal Instrument Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfLocationChange -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfLocationChange">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMotion"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Motion in which the location of some Object is changed by some Agent.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Location Change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMassMediaCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMassMediaCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Communication intended to reach a large audience using a medium such as the internet, television, radio, newspaper, and magazine.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/The_media</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Mass Media Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMilitaryForce -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMilitaryForce">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act of employing a Military Force to achieve some desired result.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Military Force</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMotion -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMotion">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act by which an Agent causes the position or location of some Object to change.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://www.merriam-webster.com/dictionary/motion</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Motion</rdfs:label>
+        <rdfs:label>motion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPersonalCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPersonalCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Communication having a small audience.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Personal Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPlanning -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPlanning">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act that involves making a Plan to achieve some specified Objective.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Planning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPortionOfMaterialConsumption -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPortionOfMaterialConsumption">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Employment in which a Portion of Material is expended.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Portion of Material Consumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPositionChange -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPositionChange">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfMotion"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Motion in which the position (i.e. the orientation, alignment, or arrangement) of some Object or of one or more of an Object&apos;s parts is changed by some Agent.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a top spinning in place</ExtendedRelationOntology:example_of_usage>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adjusting your posture</ExtendedRelationOntology:example_of_usage>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raising your left arm</ExtendedRelationOntology:example_of_usage>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">swivelling your office chair to face the window</ExtendedRelationOntology:example_of_usage>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Position Change does not entail a change of location.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Position Change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPossession -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfPossession">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act in which an agent intentionally exercises control towards a thing.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Possession_(law)</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In all cases, to possess something, an agent must have an intention to possess it.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Possession</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfReconnaissance -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfReconnaissance">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfIntelligenceGathering"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Intelligence Gathering used to determine an Agent&apos;s disposition and intention; the composition and capabilities of Equipment and Facilities, and the surrounding landforms and weather conditions.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Reconnaissance</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Reconnaissance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfRepresentativeCommunication -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfRepresentativeCommunication">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfCommunication"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Communication that commits a speaker to the truth of the expressed proposition.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived (loosely) from: John Searle&apos;s Speech Acts: An Essay in the Philosophy of Language</ExtendedRelationOntology:definition_source>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: affirming, alleging, announcing, answering, attributing, claiming, classifying, concurring, confirming, conjecturing, denying, disagreeing, disclosing, disputing, identifying, informing, insisting, predicting, ranking, reporting, stating, stipulating</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Representative Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTerrorism -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTerrorism">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Violence which creates fear and which is prescribed by religious, political or ideological objectives, and which deliberately target or disregard the safety of civilians and are committed by members of non-government organizations.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Terrorism</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Terrorism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfToolUse -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfToolUse">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Employment in which some Agent uses some Tool.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Tool Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTraining -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTraining">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act in which knowledge, skills or values are imparted from one or more Agents to at least one other Agent.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Education</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Training</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTrainingAcquisition -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTrainingAcquisition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTraining"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Training performed by an Agent by acquiring knowledge from another Agent.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Training Acquisition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTrainingInstruction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTrainingInstruction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfTraining"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Training performed by an Agent by imparting knowledge to another Agent.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Training Instruction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfVehicleUse -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfVehicleUse">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Employment in which some Agent uses some Vehicle.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Vehicle Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfViolence -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfViolence">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act of causing harm to oneself or to another through the use of physical or verbal force.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Violence</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Violence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfWeaponUse -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfWeaponUse">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#ActOfArtifactEmployment"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act of Artifact Employment in which some Agent uses some Weapon.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Act of Weapon Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#CriminalAct -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#CriminalAct">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act committed in violation of rules or laws for which some governing authority (via mechanisms such as legal systems) can prescribe a conviction.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wikipedia.org/wiki/Crime</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Criminal Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Change in which some Independent Continuant has a decrease in the level of some Dependent Continuant that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDisposition -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDisposition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Decrease of Realizable Entity in which some Independent Continuant has a decrease of some Disposition it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Decrease of Realizable Entity in which some Independent Continuant has a decrease of some Function that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfGenericallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfGenericallyDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Decrease of Dependent Continuant in which some Independent Continuant has a decrease in the level of a Generically Dependent Continuant that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comment: For the most part Generically Dependent Continuants do not inhere in their bearers over some continuous scale. The primary exception is religion and this class allows annotation of those cases where an Agent is described as becoming less religious. Other cases would include the decrease of an organization&apos;s bearing of some objective.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Generically Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfQuality -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfQuality">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfSpecificallyDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Decrease of Specifically Dependent Continuant in which some Independent Continuant has a decrease of some Quality that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: Weight Loss, Decreasing Temperature, decreasing color intensity, loss of structural integrity</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfRealizableEntity -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfRealizableEntity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfSpecificallyDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Decrease of Specifically Dependent Continuant in which some Independent Continuant has a decrease of some Realizable Entity that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Realizable Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfRole -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfRole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Decrease of Realizable Entity in which some Independent Continuant has a decrease of some Role that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfSpecificallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfSpecificallyDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#DecreaseOfDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Decrease of Dependent Continuant in which some Independent Continuant has a decrease in some Specifically Dependent Continuant that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decrease of Specifically Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#bearer_of"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Change in which an Independent Continuant becomes the bearer of some Dependent Continuant.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gain of Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfDisposition -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfDisposition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_disposition"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Gain of Realizable Entity in which some Independent Continuant becomes the bearer of some Disposition.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class should be used to demarcate the start of the temporal interval (through the occurs_on property) that the Entity bears the Disposition.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gain of Disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_function"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Gain of Realizable Entity in which some Independent Continuant becomes the bearer of some Function.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class should be used to demarcate the start of the temporal interval (through the occurs_on property) that the Entity bears the Function.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gain of Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfGenericallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfGenericallyDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfDependentContinuant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#bearer_of"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Gain of Dependent Continuant wherein some Independent Continuant becomes the bearer of some Generically Dependent Continuant.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: A Person forms a Plan, A Person is initiated into a Religion, A photgraphic image is produced.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gain of Generically Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfQuality -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfQuality">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfSpecificallyDependentContinuant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_quality"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Gain of Specifically Dependent Continuant in which an Independent Continuant becomes the bearer of some Quality.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: A person becoming pregnant.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gain of Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRealizableEntity -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRealizableEntity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfSpecificallyDependentContinuant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#bearer_of"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Gain of Specifically Dependent Continuant in which some Independent Continuant becomes the bearer of some Realizable Entity.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: An informant becomes unreliable (disposition), A person begins to speak French (function), a person becomes a welder (role).</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gain of Realizable Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRole -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#has_role"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Gain of Realizable Entity in which some Independent Continuant becomes bearer of some Role.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class should be used to demarcate the start of the temporal interval (through the occurs_on property) that the Entity bears the Role.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gain of Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfSpecificallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfSpecificallyDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#GainOfDependentContinuant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.obofoundry.org/ro/ro.owl#has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#bearer_of"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Gain of Dependent Continuant in which some Independent Continuant becomes the bearer of some Specifically Dependent Continuant.</ExtendedRelationOntology:definition>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: A Person becomes pregnant (gain of quality), A person becomes forgetful (gain of disposition), A vehicle becomes amphibious (gain of function), A Person becomes a Database Administrator (gain of role).</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gain of Specifically Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Change in which some Independent Continuant has an increase in the level of some Dependent Continuant that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDisposition -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDisposition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Increase of Realizable Entity in which some Independent Continuant has an increase of some Disposition that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Increase of Realizable Entity in which some Independent Continuant has an increase of some Function that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfGenericallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfGenericallyDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Increase of Dependent Continuant in which some Independent Continuant has an increase of some Generically Dependent Continuant that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Generically Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfQuality -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfQuality">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfSpecificallyDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Increase of Specifically Dependent Continuant in which some Indpendent Continuant has an increase of some Quality that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfRealizableEntity -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfRealizableEntity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfSpecificallyDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Increase of Specifically Dependent Continuant in which some Independent Continuant has an increase of some Realizable Entity that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Realizable Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfRole -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfRole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfRealizableEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#affects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Increase of Realizable Entity in which some Independent Continuant has an increase of some Role that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfSpecificallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfSpecificallyDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IncreaseOfDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Increase of Dependent Continuant in which some Independent Continuant has an increase of some Specifically Dependent Continuant that it bears.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Increase of Specifically Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Act"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intentional Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LegalSystemAct -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LegalSystemAct">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act performed by an Agent that realizes their role within the context of a legal system of some jurisdiction.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://www.id.uscourts.gov/glossary.htm</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legal System Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#Change"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Change in which some Independent Continuant ceases to be the bearer of some Dependent Continuant.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfDisposition -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfDisposition">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfRealizableEntity"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Loss of Realizable Entity in which some Independent Continuant ceases to be the bearer of some Disposition.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfFunction -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfRealizableEntity"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Loss of Realizable Entity in which some Independent Continuant ceases to be the bearer of some Function.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfGenericallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfGenericallyDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Loss of Dependent Continuant in which some Independent Continuant ceases to be the bearer of some Generically Dependent Continuant.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Generically Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfQuality -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfQuality">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfSpecificallyDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Loss of Specifically Dependent Continuant in which some Independent Continuant ceases to be the bearer of some Quality.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfRealizableEntity -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfRealizableEntity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfSpecificallyDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Loss of Specifically Dependent Continuant in which some Independent Continuant ceases to be the bearer of some Realizable Entity.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Realizable Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfRole -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfRole">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfRealizableEntity"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Loss of Realizable Entity in which some Independent Continuant ceases to be the bearer of some Role.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfSpecificallyDependentContinuant -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfSpecificallyDependentContinuant">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#LossOfDependentContinuant"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Loss of Dependent Continuant in which some Independent Continuant ceases to be the bearer of some Specifically Dependent Continuant.</ExtendedRelationOntology:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Specifically Dependent Continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#SocialAct -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#SocialAct">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Intentional Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:definition_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived from: http://en.wiktionary.org/wiki/commually</ExtendedRelationOntology:definition_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Social Act</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationContentEntity -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#InformationContentEntity"/>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of two dimensional regions or geospatial regions</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">square feet, square meters, acre, hectare</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of the amount of work that is available in an object</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ft-lbs, calorie, horsepower, kilowatt</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of interactions in which the motion or velocity of an object are changed.</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">newton, dyne, pound force </ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Force</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of one dimensional regions or geosptial regions</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">foot, meter, kilometer, mile</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Length</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLevel -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLevel">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of a ratio of the quality to a reference value of that same quality</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of an object&apos;s resistance to acceleration when a force has been applied</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ounce, gram, pound</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Mass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of rates of work</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">watt, horsepower</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Power</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of force applied perpendicular to a surface per unit area</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pascal, atmosphere, pound-force per square inch</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Pressure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of the rates at which objects cover distance</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">miles per hour, kilometers per hour, knot, mach</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Speed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTemperature -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTemperature">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of the thermal energy in an object </ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">celsius, fahrenheit, kelvin</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of temporal regions</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">second, minute, hour, day</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of three dimensional regions or geospatial regions</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cubic feet, cubic meter, quart, liter</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Volume</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork">
+        <ExtendedRelationOntology:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement unit used in measurements of displacements of points to which forces have been applied</ExtendedRelationOntology:definition>
+        <ExtendedRelationOntology:example_of_usage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joule, erg, kilowatt hour</ExtendedRelationOntology:example_of_usage>
+        <rdfs:label>Measurement Unit of Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#ObsoleteClass -->
+
+    <owl:Class rdf:about="http://www.ontologylibrary.mil/CommonCore/Upper/ExtendedRelationOntology#ObsoleteClass"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+        <ExtendedRelationOntology:definition>a capability is a beneficial disposition inhering in some entity that when realized allows said entity to successfuly particiapte in a process up to some specified level</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#price -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#price">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <obo:IAO_0000115>a price is the disposition of some continuant to be exchanged between agents in return for another continuant or set of continuants when realzied in a  commercial process.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:label>stakeholder role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#agent -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#agent">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_coefficient -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_coefficient">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_data_item"/>
+        <rdfs:label>computed coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_data_item -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#computed_data_item">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DescriptiveInformationContentEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#assignment -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#assignment">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DirectiveInformationContentEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DesignativeInformationContentEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <ExtendedRelationOntology:definition>an acceptance decision is a decision specificaiton that specifies that some proposition in a binary decision is to be carried out</ExtendedRelationOntology:definition>
+        <rdfs:label>acceptance decision specificaiton</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+        <ExtendedRelationOntology:definition>an act of characterization is an intentional act that involves some entity collecting or asserting information about another entity to better understand the traits that inhere in it.</ExtendedRelationOntology:definition>
+        <rdfs:label>Act of Characterization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#approval_decision -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#approval_decision">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision"/>
+        <rdfs:label>approval decision specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#attribute_level_classification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#attribute_level_classification">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#importance_classification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authorization_decision -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#authorization_decision">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision"/>
+        <ExtendedRelationOntology:definition>an authorization decision is an acceptance decision specification that additionally reflects an exercise of authority in the form of an act of granting permission.</ExtendedRelationOntology:definition>
+        <rdfs:label>authorization decision specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#concurrence_decision -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#concurrence_decision">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#acceptance_decision"/>
+        <rdfs:label>concurrence decision specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/EventOntology#IntentionalAct"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_alternative_classificaiton -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_alternative_classificaiton">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
+        <rdfs:comment>a decision alternative classification is a classification that indicates some entity is to be considered as a possible choice in a decision described in a decision process plan</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_maker_role -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_maker_role">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <ExtendedRelationOntology:definition>a decision role is a role wherein wherein the bearer realizes the role by performing a decision process resulting in a decisoin</ExtendedRelationOntology:definition>
+        <rdfs:label>decision maker role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#PlanSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification">
+        <ExtendedRelationOntology:definition>a decision specification is a directive information content entity that indicates the results of a decision (occurrent) wherein one option is selected from some set of possible alternatives</ExtendedRelationOntology:definition>
+        <rdfs:label>decision specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#deliverable_classification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#deliverable_classification">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
+        <ExtendedRelationOntology:definition>differentiation is a relational quality that reflects the degree to which one entity can be distinguished from another based on its the aggregate of traits it bears.</ExtendedRelationOntology:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation_classification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation_classification">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#importance_classification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#importance_classification">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#key_performance_parameter_designation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#key_performance_parameter_designation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DesignativeName"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#marginally_acceptable -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#marginally_acceptable">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label"/>
+        <rdfs:label>marginally acceptable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#maximizing_objective -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#maximizing_objective">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Objective"/>
+        <rdfs:label>maximizing objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#meaningful_limit -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#meaningful_limit">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label"/>
+        <rdfs:label>meaningful limit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_specification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_specification">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#PlanSpecification"/>
+        <obo:IAO_0000115>a measurement specification is an action specification that indicates the intent to measure soem aspect of an entity using some specific type of measurement</obo:IAO_0000115>
+        <rdfs:label>measurement type specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#minimizing_objective -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#minimizing_objective">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#Objective"/>
+        <rdfs:label>minimizing objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#need_identification_process">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#observation_process -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#observation_process">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_elicitation_process">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#measurement_process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/regulation.owl#classification"/>
+        <rdfs:label>preference level classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rank_specification -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rank_specification">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+        <obo:IAO_0000115>a rank specification is a categorical value specification that specifies the performance of some entity relative to other entities within a set as judged by some assessment plan</obo:IAO_0000115>
+        <rdfs:label>rank specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rejection_decision -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#rejection_decision">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <ExtendedRelationOntology:definition>a rejection decision specification is a decision specification that specifies some proposition considered during a decision process is not to be pursued</ExtendedRelationOntology:definition>
+        <rdfs:label>rejection decision specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#selection_decision -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#selection_decision">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_specification"/>
+        <ExtendedRelationOntology:definition>a selection decision specification is a decision specification that specifies that a decision process has identifed one alternative to be pursued from a set of possible alternatives.</ExtendedRelationOntology:definition>
+        <rdfs:label>selection decision specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#speed_capability -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#speed_capability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/ICAM/master/BEM2.0.owl#capability"/>
+        <ExtendedRelationOntology:definition>a speed capability is a capability that allows some entity to a certain level of speed during a process</ExtendedRelationOntology:definition>
+        <rdfs:label>speed capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#sponsor_role -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#sponsor_role">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/ergo-design.owl#stakeholder_role"/>
+        <ExtendedRelationOntology:definition>a sponsor role is a stakeholder role wherein the agent bearer is providing support (financial, reputational, etc.) to a process</ExtendedRelationOntology:definition>
+        <rdfs:label>sponsor role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#stretch_goal -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#stretch_goal">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label"/>
+        <rdfs:label>stretch goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#target_value -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#target_value">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label"/>
+        <rdfs:label>target value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#tradeoff -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#tradeoff">
+        <rdfs:subClassOf rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/InformationEntityOntology#DescriptiveInformationContentEntity"/>
+        <obo:IAO_0000115>a tradeoff is a despcriptive information content entity that describes a conflict between two attributes of a problem wherein changes that would be assesssed as improving one attribute result in some degree of perceived harm to another.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#walk_way_point -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#walk_way_point">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#preference_level_label"/>
+        <rdfs:label>walk away point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#weight_data_set -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#weight_data_set">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <obo:IAO_0000115>a weight data set is a data set consisting of a set of preference weighting factors used to construct a model of some agent&apos;s preferences, or a bias a model to reflect those preferences</obo:IAO_0000115>
+        <rdfs:label>weight data set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#specification_process -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_process.owl#specification_process">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#act_of_characterization"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#AcreMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#AcreMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Acre Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#AtmosphereMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#AtmosphereMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure"/>
+        <rdfs:label>Atmosphere Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#BarMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#BarMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure"/>
+        <rdfs:label>Bar Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#BayreMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#BayreMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure"/>
+        <rdfs:label>Bayre Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#BritishThermalUnitMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#BritishThermalUnitMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork"/>
+        <rdfs:label>British Thermal Unit Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CalorieMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CalorieMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork"/>
+        <rdfs:label>Calorie Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CentigramMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CentigramMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Centigram Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CentiliterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CentiliterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Centiliter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CentimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CentimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Centimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicCentimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicCentimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Cubic Centimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicDecimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicDecimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Cubic Decimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicFootMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicFootMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Cubic Foot Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicInchMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicInchMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Cubic Inch Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicMeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicMeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Cubic Meter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicMillimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicMillimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Cubic Millimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicYardMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#CubicYardMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Cubic Yard Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DayMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DayMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime"/>
+        <rdfs:label>Day Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DecibelMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DecibelMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLevel"/>
+        <rdfs:label>Decibel Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DecigramMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DecigramMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Decigram Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DeciliterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DeciliterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Deciliter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DecimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DecimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Decimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DegreeCelsiusMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DegreeCelsiusMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTemperature"/>
+        <rdfs:label>Degree Celsius Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DegreeFahrenheitMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DegreeFahrenheitMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTemperature"/>
+        <rdfs:label>Degree Fahhrenheit Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DyneMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#DyneMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce"/>
+        <rdfs:label>Dyne Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#ErgMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#ErgMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork"/>
+        <rdfs:label>Erg Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#FootMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#FootMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Foot Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#GallonMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#GallonMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Gallon Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#GramMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#GramMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Gram Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#HorsepowerMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#HorsepowerMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork"/>
+        <rdfs:label>Horsepower Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#HourMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#HourMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime"/>
+        <rdfs:label>Hour Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#InchMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#InchMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Inch Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#JouleMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#JouleMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfEnergy"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPower"/>
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfWork"/>
+        <rdfs:label>Joule Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilogramMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilogramMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Kilogram Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KiloliterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KiloliterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Kiloliter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilometerMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilometerMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Kilometer Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilometerPerHourMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilometerPerHourMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed"/>
+        <rdfs:label>Kilometer Per Hour Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilopondMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KilopondMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce"/>
+        <rdfs:label>Kilopond Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KnotMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#KnotMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed"/>
+        <rdfs:label>Knot Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#LiterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#LiterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Liter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#LongTonMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#LongTonMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Long Ton Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Meter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeterPerSecondMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeterPerSecondMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed"/>
+        <rdfs:label>Meter Per Second Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MetricTonMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MetricTonMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Metric Ton Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MileMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MileMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Mile Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilePerHourMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilePerHourMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfSpeed"/>
+        <rdfs:label>Mile Per Hour Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MillibarMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MillibarMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure"/>
+        <rdfs:label>Millibar Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilligramMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilligramMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Milligram Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilliliterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MilliliterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Milliliter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MillimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MillimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Millimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MinuteMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MinuteMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime"/>
+        <rdfs:label>Minute Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MonthMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MonthMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime"/>
+        <rdfs:label>Month Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#NauticalMileMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#NauticalMileMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Nautical Mile Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#NewtonMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#NewtonMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce"/>
+        <rdfs:label>Newton Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#OunceMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#OunceMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Ounce Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PascalMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PascalMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure"/>
+        <rdfs:label>Pascal Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PintMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PintMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Pint Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PoundForceMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PoundForceMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfForce"/>
+        <rdfs:label>Pound Force Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PoundMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PoundMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Pound Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PoundsPerSquareInchMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#PoundsPerSquareInchMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfPressure"/>
+        <rdfs:label>Pounds Per Square Inch Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#QuartMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#QuartMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Quart Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SecondMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SecondMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime"/>
+        <rdfs:label>Second Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#ShortTonMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#ShortTonMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfMass"/>
+        <rdfs:label>Short Ton Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareCentimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareCentimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Centimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareDecimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareDecimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Decimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareFootMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareFootMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Foot Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareInchMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareInchMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Inch Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareKilometerMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareKilometerMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Kilometer Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareMeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareMeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Meter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareMileMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareMileMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Mile Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareMillimeterMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareMillimeterMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Millimeter Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareYardMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#SquareYardMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfArea"/>
+        <rdfs:label>Square Yard Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#TablespoonMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#TablespoonMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Tablespoon Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#TeaspoonMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#TeaspoonMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfVolume"/>
+        <rdfs:label>Teaspoon Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#YardMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#YardMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfLength"/>
+        <rdfs:label>Yard Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#YearMeasurementUnit -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#YearMeasurementUnit">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/UnitsOfMeasureOntology#MeasurementUnitOfTime"/>
+        <rdfs:label>Year Measurement Unit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#classification_marginally_acceptable -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#classification_marginally_acceptable">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#attribute_level_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#classification_meaningful_limit -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#classification_meaningful_limit">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#attribute_level_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#classification_stretch_goal -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#classification_stretch_goal">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#attribute_level_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#classification_target_value -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#classification_target_value">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#attribute_level_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#critical_importance_classification -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#critical_importance_classification">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#importance_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#defining_importance_classification -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#defining_importance_classification">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#importance_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#enabling_importance_classification -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#enabling_importance_classification">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#importance_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#high_differentiation_classification -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#high_differentiation_classification">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#low_differentiation_classification -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#low_differentiation_classification">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#medium_differentation_classification -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#medium_differentation_classification">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#differentiation_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#objective_spec_uav -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#objective_spec_uav"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#plan_uav_decision -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#plan_uav_decision">
+        <rdf:type rdf:resource="http://www.ontologylibrary.mil/CommonCore/Mid/AgentOntology#PlanSpecification"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#decision_plan_specification"/>
+        <ExtendedRelationOntology:has_part rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#objective_spec_uav"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#walkaway_point_classification -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#walkaway_point_classification">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#attribute_level_classification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000293">
+        <rdfs:label>has specified input</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000299">
+        <rdfs:label>has specified output</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#estimate">
+        <ExtendedRelationOntology:definition>an estimate is a computed data item that attempts to approximate some quantity of interest based on a formal or informal model</ExtendedRelationOntology:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/UMassCenterforeDesign/core/master/model.owl#modeling_process">
+        <ExtendedRelationOntology:definition>a modeling process is a specification process wherein an agent generates a model that represents known information or predicts unknown information to characterize an entity</ExtendedRelationOntology:definition>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl#d1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl#d2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#eliminates_option"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#d1"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_alternative"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#d2"/>
+                                <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://raw.githubusercontent.com/UMassCenterforeDesign/decision-making/master/decision_core.owl#has_inactive_alternative"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#d2"/>
+                        <swrl:argument2 rdf:resource="urn:swrl#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
